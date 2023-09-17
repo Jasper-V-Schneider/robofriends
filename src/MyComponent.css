@@ -1,0 +1,11 @@
+body {
+  background-color: #0c0c0c;
+  color: white;
+  font-family: monospace;
+}
+img {
+  width: 250px;
+}
+button {
+  background-color: #61dafb;
+}
