@@ -1,0 +1,15 @@
+section {
+  text-align: center;
+  border: 3px solid white;
+  background-color: darkcyan;
+  border-radius: 15px;
+  width: 200px;
+  padding: 25px;
+  transition: 0.2s;
+}
+section:hover {
+  transform: scale(1.1);
+}
+img {
+  width: 150px;
+}
