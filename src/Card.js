@@ -1,7 +1,7 @@
-import "./Card.css";
 import React from "react";
+import "./Card.css";
 
-let Card = () => {
+let Card = ({ index }) => {
   const robots = [
     {
       name: "Bob",
@@ -41,15 +41,13 @@ let Card = () => {
     },
   ];
 
-  let robotIndex = Math.floor(Math.random() * (8 - 0) + 0);
-
   return (
-    <section>
-      <h1>{robots[robotIndex].name}</h1>
+    <div id="card-container">
+      <h1>{robots[index].name}</h1>
       <div>
-        <img alt="robot" src={robots[robotIndex].link}></img>
+        <img alt="robot" src={robots[index].link}></img>
       </div>
-    </section>
+    </div>
   );
 };
 

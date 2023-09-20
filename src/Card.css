@@ -1,13 +1,14 @@
-section {
+div#card-container {
   text-align: center;
   border: 3px solid white;
   background-color: darkcyan;
   border-radius: 15px;
-  width: 200px;
+  width: 150px;
   padding: 25px;
-  transition: 0.2s;
+  transition: 0.25s;
+  box-shadow: 0 0 25px darkcyan;
 }
-section:hover {
+div#card-container:hover {
   transform: scale(1.1);
 }
 img {
