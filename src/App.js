@@ -1,36 +1,90 @@
 import React from "react";
 import "./App.css";
-import Card from "./Card";
+import CardList from "./CardList";
 import Search from "./Search";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      robots: [],
       searchfield: "",
     };
   }
 
+  componentDidMount() {
+    this.setState({
+      robots: [
+        {
+          name: "Bob",
+        },
+        {
+          name: "Tom",
+        },
+        {
+          name: "Nick",
+        },
+        {
+          name: "Cevin",
+        },
+        {
+          name: "Robin",
+        },
+        {
+          name: "Cenk",
+        },
+        {
+          name: "Nils",
+        },
+        {
+          name: "David",
+        },
+        {
+          name: "Elia",
+        },
+        {
+          name: "Lino",
+        },
+        {
+          name: "Basti",
+        },
+        {
+          name: "Sonja",
+        },
+        {
+          name: "Jakob",
+        },
+        {
+          name: "Louis",
+        },
+        {
+          name: "Marisa",
+        },
+        {
+          name: "Sarah",
+        },
+        {
+          name: "Ben",
+        },
+        {
+          name: "Niclas",
+        },
+        {
+          name: "Nick",
+        },
+      ],
+    });
+  }
+
   onSearch = (event) => {
-    this.state.searchfield = event.target.value;
-    console.log(this.state.searchfield);
+    this.setState({ searchfield: event.target.value });
   };
 
   render() {
     return (
       <div id="app-container">
         <Search handleChange={this.onSearch} />
-        <div id="cards">
-          <Card index="0" />
-          <Card index="1" />
-          <Card index="2" />
-          <Card index="3" />
-          <Card index="4" />
-          <Card index="5" />
-          <Card index="6" />
-          <Card index="7" />
-          <Card index="8" />
-        </div>
+        <CardList input={this.state.searchfield} robots={this.state.robots} />
       </div>
     );
   }
