@@ -69,9 +69,6 @@ class App extends React.Component {
         {
           name: "Niclas",
         },
-        {
-          name: "Nick",
-        },
       ],
     });
   }
