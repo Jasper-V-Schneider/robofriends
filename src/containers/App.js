@@ -1,67 +1,70 @@
 import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
 import "./App.css";
 import CardList from "./CardList";
 import Search from "../components/Search";
+import { setSearchfield } from "../actions";
 
-function App() {
+function App({ store }) {
   const [robots, setRobots] = useState([]);
   const [searchfield, setSearchfield] = useState("");
 
   useEffect(() => {
+    console.log(store.getState());
     setRobots([
       {
-        name: "Bob",
-      },
-      {
-        name: "Tom",
-      },
-      {
-        name: "Nick",
-      },
-      {
-        name: "Cevin",
-      },
-      {
-        name: "Robin",
-      },
-      {
-        name: "Cenk",
-      },
-      {
-        name: "Nils",
-      },
-      {
-        name: "David",
-      },
-      {
-        name: "Elia",
-      },
-      {
-        name: "Lino",
-      },
-      {
-        name: "Basti",
-      },
-      {
-        name: "Sonja",
-      },
-      {
-        name: "Jakob",
-      },
-      {
-        name: "Louis",
-      },
-      {
-        name: "Marisa",
+        name: "John",
       },
       {
         name: "Sarah",
       },
       {
-        name: "Ben",
+        name: "Emily",
       },
       {
-        name: "Niclas",
+        name: "David",
+      },
+      {
+        name: "Jennifer",
+      },
+      {
+        name: "Christopher",
+      },
+      {
+        name: "Nils",
+      },
+      {
+        name: "Amanda",
+      },
+      {
+        name: "Daniel",
+      },
+      {
+        name: "Nick",
+      },
+      {
+        name: "Jessica",
+      },
+      {
+        name: "Matthew",
+      },
+      {
+        name: "Ashley",
+      },
+      {
+        name: "James",
+      },
+      {
+        name: "Elizabeth",
+      },
+      {
+        name: "Robert",
+      },
+      {
+        name: "Stephanie",
+      },
+      {
+        name: "William",
       },
     ]);
   }, []);
@@ -78,4 +81,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect()(App);
